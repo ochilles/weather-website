@@ -1,7 +1,5 @@
 // client side javascript file
 
-console.log('Client side javascript file is loaded')
-
 // fetch json data from url
 // fetch('http://puzzle.mead.io/puzzle').then((response) => {
 //     // parsing json data to an object then print
