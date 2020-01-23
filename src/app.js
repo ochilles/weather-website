@@ -13,6 +13,10 @@ console.log(path.join(__dirname, '..'))
 console.log(path.join(__dirname, '../public'))
 
 const app = express()
+// get port number which heroku provides (environment variable value) when the app is deployed
+// or
+// 3000 is default value incase we need to run the app locally
+const port = process.env.PORT || 3000
 
 // Define path for express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -134,8 +138,8 @@ app.get('*', (req, res) => {
 // Start the server up
 // port 3000 - common development port
 // callback function which runs when server is up
-app.listen(3000, () => {
-    console.log('Server is up on port 3000')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
 
 
